@@ -13,3 +13,9 @@ Ook de crashcourse AI x Design vond ik interessant. Om te zien hoe je nou echt e
 ## Teachable machine
 
 - Plaats code voor de opdracht van week 2 in deze folder.
+
+Het model heb ik getraind zodat hij terug geeft welke kant ik op kijk (links, recht, boven, onder, recht).
+De webapp verteld je naar welke kant je moet kijken en wanneer je dit doet wordt weer de "dice" gerolt en veranderd de richting.
+Hiervoor heb ik de functie rollDice() geschreven die een tekstje aanpast op de pagina en zo verteld waar je moet kijken. Deze funtie wordt uitgevoerd wanneer er op de start-knop wordt gedrukt en wanneer deze opdracht wordt voldaan.
+Checken welke kant ik op kijk wordt gedaan in de functie predict(). Door model.predictTopK() haal ik de best passende prediction op en daar pak ik de classname van. Deze classname check ik met de gerolde dice. Als ze overeenkomen wordt rollDice() aangeroepen en veranderd de opdracht. 
+Hij is niet 100% consistent. Hiervoor kan een beter model en/of pas de prediction goedkeuren als hij boven de xx% is, i.p.v. wanneer hij hoger is al de anderen.
