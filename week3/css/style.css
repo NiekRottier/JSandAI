@@ -1,0 +1,55 @@
+* {
+    color: white;
+}
+
+button, input {
+    background-color: black;
+    height: 4vh;
+    border-radius: 5%;
+    border: 1px solid white;
+
+    padding: 5px;
+    margin: 0 1vw;
+}
+
+button {
+    width: 12vw;
+}
+
+input {
+    width: 30vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: black;
+    overflow: hidden;
+    /* centered column with flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    display:none;
+    width: auto;
+    height: auto;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+
+    margin: 2vh 0;
+}
+
+#prediction {
+    font-style: italic;
+}
