@@ -1,22 +1,31 @@
 let synth = window.speechSynthesis
 let nn;
 
+// Load the model
 function loadModel() {
-    nn = ml5.imageClassifier('MobileNet', modelLoaded)
+    nn = ml5.imageClassifier('MobileNet', () => console.log("Model Loaded!"))
 }
 
-function modelLoaded() {
-    console.log('Model Loaded!');
-    predictButton()
+// Upload images
+const fileButton = document.querySelector("#file")
+const image = document.getElementById('output')
+
+fileButton.addEventListener("change", (event)=>loadFile(event))
+image.addEventListener('load', () => userImageUploaded())
+
+function loadFile(event) {
+	image.src = URL.createObjectURL(event.target.files[0])
 }
 
-function predictButton() {
-    let predictButton = document.getElementById("predictButton")
-    predictButton.addEventListener("click", classifyImage)
+function userImageUploaded(){
+    console.log("The image is now visible!")
+    classifyImage()
 }
 
+// Make predictions
 async function classifyImage() {
-    let image = document.getElementById("image")
+    console.log("Classifying...");
+    let image = document.getElementById("output")
     let predictions;
     await nn.classify(image, (err, results) => {
         // console.log(results);
@@ -28,6 +37,7 @@ async function classifyImage() {
     speak(`I think this is a ${predictions[0].label} and I'm ${Math.round(predictions[0].confidence*10000)/100}% sure about it.`);
 }
 
+// Speak a message
 function speak(message) {
     let utterThis = new SpeechSynthesisUtterance(message)
     synth.speak(utterThis)

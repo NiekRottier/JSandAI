@@ -10,7 +10,14 @@
 </head>
 <body>
     <h2>Loading a pre-trained model</h2>
-    <img id="image" src="./images/hamster.jpg">
+    <!-- <img id="image" src="./images/hamster.jpg"> -->
+    <div>
+        <label for="file">Upload Image</label>
+        <input type="file" accept="image/*;capture=camera" id="file">
+    </div>
+      
+    <div><img id="output" width="400"/></div>
+    
     <button id="predictButton">Predict!</button>
 </body>
 </html>
