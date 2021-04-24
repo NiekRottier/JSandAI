@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+}
+
+h1, p, small, a{
+    font-family: 'Oswald', sans-serif;
+
+    width: fit-content;
+    background-color: yellow;
+}
+
+a{
+    color: darkcyan;
+}
+
+p{
+    background-color: blue;
+    color: white;
+}
+
+#dogPic{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    z-index: -1;
+
+    height: 85vh;
+    width: 85vw;
+    background-color: rgb(238, 238, 238);
+
+    object-fit: scale-down;
+}
+
+video, canvas{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+video{
+    background-color: blue;
+    border: solid blue 5px;
+}

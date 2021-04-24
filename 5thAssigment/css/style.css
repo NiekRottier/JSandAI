@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(60, 128, 255);
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#upload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#upload label{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+#upload input{
+    background-color: cyan;
+    border: solid 5px green;
+}
+
+#output{
+    width: 60vw;
+    margin: 15px;
+    border: solid 20px greenyellow;
+    border-radius: 5vw;
+}

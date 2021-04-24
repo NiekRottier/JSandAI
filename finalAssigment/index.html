@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Stay happy</title>
+</head>
+<body>
+    <h1>Staying happy!</h1>
+    <p>This little app uses face-api to read the emotions of your face. If you look sad, angry or even disgusted you get to look at a new doggo!</p>
+    <small>This application makes use of <a href="https://github.com/justadudewhohacks/face-api.js" target="_blank">Face API</a> and <a href="https://dog.ceo/dog-api/" target="_blank">Dog API</a>.</small>
+    <br>
+    <small>Made by Niek Rottier - <a href="http://instagram.com/nr.cmgt/" target="_blank">&commat;nr.cmgt</a></small>
+
+    <div id="webcam">
+        <video id="video" width="266" height="200" autoplay muted></video>
+    </div>
+
+    <img id="dogPic" src="" alt="Random dog">
+
+    <!-- JavaScript -->
+    <script src="./js/face-api.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
