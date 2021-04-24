@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background: black;
+}
+
+p{
+    text-align: center;
+}
+
+a:hover{
+    text-align: center;
+    color: rgb(226, 226, 226);
+}
+
+.assignment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 125px;
+    width: 400px;
+    margin: 10px 0;
+    border: solid 1px blue;
+}
