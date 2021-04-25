@@ -11,7 +11,12 @@ body{
     background: black;
 }
 
-p{
+p, .warning{
+    text-align: center;
+    padding: 0 5vw;
+}
+
+small{
     text-align: center;
 }
 
@@ -26,8 +31,10 @@ a:hover{
     justify-content: center;
     align-items: center;
 
-    height: 125px;
-    width: 400px;
+    height: min-content;
+    width: 300px;
+    max-width: 98vw;
     margin: 10px 0;
+    padding: 5px;
     border: solid 1px blue;
 }
