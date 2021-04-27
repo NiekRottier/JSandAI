@@ -178,7 +178,7 @@ async function prediction() {
     let prediction = await nn.predict({ horsepower:  Number(predictionInput.value) });
 
     console.log(prediction[0].mpg);
-    predictionOutput.innerHTML = `${predictionInput.innerText}Miles per gallor is probably ${Math.round(prediction[0].mpg * 100)/100} mpg`
+    predictionOutput.innerHTML = `${predictionInput.innerText}Miles per gallon is probably ${Math.round(prediction[0].mpg * 100)/100} mpg`
 }
 
 //
