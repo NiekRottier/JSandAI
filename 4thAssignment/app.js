@@ -5,7 +5,6 @@ let plot;
 let csvFile = "./data/cars.csv";
 
 function startApplication() {
-
     loadData()
 }
 
@@ -67,31 +66,31 @@ async function createNeuralNetwork(trainData, testData) {
     // initialize neural network
     nn = ml5.neuralNetwork(options);
 
-    // // add data to neural network
-    // for (let row of trainData) {
-    //     // addData({inputs}, {outputs})
-    //     nn.addData({ horsepower: row.horsepower }, {  mpg: row.mpg })
-    // }
+    // add data to neural network
+    for (let row of trainData) {
+        // addData({inputs}, {outputs})
+        nn.addData({ horsepower: row.horsepower }, {  mpg: row.mpg })
+    }
 
-    // // normalize data
-    // nn.normalizeData();
+    // normalize data
+    nn.normalizeData();
 
-    // // train neural network
-    // const trainingOptions = {
-    //     epochs: 40,
-    //     batchsize: 10
-    // }
-    // console.log("Training...");
-    // nn.train(trainingOptions, () => {
-    //     console.log("Finished Training!")
-    //     predictionline()
-    //     calculateAccuracy(testData)
-    //     addSave()
-    //     addPrediction()
-    // })
+    // train neural network
+    const trainingOptions = {
+        epochs: 40,
+        batchsize: 10
+    }
+    console.log("Training...");
+    nn.train(trainingOptions, () => {
+        console.log("Finished Training!")
+        predictionline()
+        calculateAccuracy(testData)
+        addSave()
+        addPrediction()
+    })
 
     // Load pre-trained model
-    loadModel(testData)
+    // loadModel(testData)
 }
 
 //
